@@ -13,14 +13,30 @@ header {
     background-color: rgb(120, 66, 170);
     grid-area: c;
 
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center;
+    display: grid;
+    grid-template-areas: "l s"
+                          "p p"; 
+    grid-template-columns: 67% 33%;     
+    grid-template-rows: 80% 20%;              
+    align-items: center;  
+    
+    
+}          
+header > img{
+    grid-area: l;
+    padding: 0px 0px 5px 30px;
+   
 }
-header > img, h1, p {
-    padding: 10px 15px 10px 15px;
+header > h1{
+    grid-area: s;
+   padding: 0px 30px 5px 0px;
+   
+}
+header > p{
+    grid-area: p;
+    text-align: center;
+    padding: 1px 0px 5px 0px;
+    
 }
 nav {
     background-color: rgb(56, 98, 161);
@@ -32,6 +48,7 @@ ul {
     justify-content: space-around;
     list-style: none;
     padding: 10px 10px 10px 10px;
+    flex:auto
 }
 li a {
     text-decoration: none;
@@ -51,26 +68,32 @@ section {
 }
 article.cp {
     grid-area: cp;
-    background-color: rgb(26, 24, 143);
-    
-    padding: 15px 15px 15px 15px;
+    background-color: rgb(26, 24, 143);  
 }
 article.cs {
     grid-area: cs;
     background-color: rgb(58, 119, 30);
-    
-    padding: 15px 15px 15px 15px;
 }
 article.cx {
     grid-area: cx;
     background-color: rgb(10, 104, 192);
-
-    padding: 15px 15px 15px 15px;
+}
+article h2, h3 {
+    padding: 30px 0px 15px 15px;
+}
+article p {
+    padding: 5px 15px 15px 15px;
+    text-align: justify;
+    line-height: 1.5;
+}
+article img {
+    width: 100%;
 }
 footer{
     background-color: rgb(57, 160, 134);
     grid-area: r;
     text-align: center;
+    padding: 10px;
 }
 footer a {
     text-decoration: none;
