@@ -5,3 +5,23 @@
     padding: 0px;
     box-sizing: border-box;
 }
+main {
+    display: grid;
+    grid-template-areas: "c" "m" "cp" "r";
+}
+header {
+    background-color: rgb(120, 66, 170);
+    grid-area: c;
+}
+nav {
+    background-color: rgb(56, 98, 161);
+    grid-area: m;
+}
+section {
+    background-color: rgb(58, 119, 30);
+    grid-area: cp;
+}
+footer{
+    background-color: rgb(57, 160, 134);
+    grid-area: r;
+}
