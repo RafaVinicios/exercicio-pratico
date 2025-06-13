@@ -7,21 +7,77 @@
 }
 main {
     display: grid;
-    grid-template-areas: "c" "m" "cp" "r";
+    grid-template-areas: "c" "m" "cc" "r";
 }
 header {
     background-color: rgb(120, 66, 170);
     grid-area: c;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+header > img, h1, p {
+    padding: 10px 15px 10px 15px;
 }
 nav {
     background-color: rgb(56, 98, 161);
     grid-area: m;
 }
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px 10px 10px 10px;
+}
+li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+li a:hover{
+    background-color: black;
+    padding: 5px;
+}
 section {
     background-color: rgb(58, 119, 30);
+    grid-area: cc;
+
+    display: grid;
+    grid-template-areas: "cp" "cs" "cx";
+}
+article.cp {
     grid-area: cp;
+    background-color: rgb(26, 24, 143);
+    
+    padding: 15px 15px 15px 15px;
+}
+article.cs {
+    grid-area: cs;
+    background-color: rgb(58, 119, 30);
+    
+    padding: 15px 15px 15px 15px;
+}
+article.cx {
+    grid-area: cx;
+    background-color: rgb(10, 104, 192);
+
+    padding: 15px 15px 15px 15px;
 }
 footer{
     background-color: rgb(57, 160, 134);
     grid-area: r;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+footer a:hover{
+    background-color: black;
+    padding: 5px;
 }
